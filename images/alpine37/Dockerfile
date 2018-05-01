@@ -1,8 +1,8 @@
-FROM alpine:3.3
+FROM alpine:3.7
 MAINTAINER Postman Labs <help@getpostman.com>
 
 # Set node version
-ENV NODE_VERSION 4.3.2
+ENV NODE_VERSION 8.9.3
 
 # Set locale
 ENV LC_ALL en_US.UTF-8
@@ -10,7 +10,7 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
 # Install node
-RUN apk add --update nodejs=${NODE_VERSION}-r1;
+RUN apk add --update nodejs=${NODE_VERSION}-r1
 
 # Set newman version
 ENV NEWMAN_VERSION 3.9.2
